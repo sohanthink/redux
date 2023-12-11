@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { increment } from '../slices/counterSlice'
+import { Link, NavLink } from 'react-router-dom'
+import About from './About'
 
 const Home = () => {
 
@@ -23,6 +25,7 @@ const Home = () => {
                 <button onClick={handleIncrement}>click</button>
                 <h2>{count}</h2>
             </div>
+            <Link to='/about'>About</Link>
         </>
     )
 }
