@@ -6,8 +6,12 @@ export const counterSlice = createSlice({
     value: 0,
   },
   reducers: {
-    increment: (state) => {
-      state.value += 1
+    increment: (state,actions) => {
+
+        state.value = actions.payload
+
+    //   this way you can update things in redux   
+    //   state.value += 1
     },
   },
 })
